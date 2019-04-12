@@ -6,34 +6,34 @@ These attributes/callbacks need to be implemented:
 
 #### Options
 
-- [x] **minDate** & **maxDate** work as expected
+- [x] **minDate** & **maxDate**: work as expected
 
 ```jsx
 minDate={moment().startOf('hour').add(32, 'hour')}
 maxDate={moment().startOf('hour').add(32, 'hour')}
 ```
 
-- [ ] **singleDatePicker** currently non-functional, should automatically switch between <LinkedCalendar> and <Calendar>
+- [ ] **singleDatePicker**: currently non-functional, should automatically switch between <LinkedCalendar> and <Calendar>
 
 ```jsx
 singleDatePicker={true|false}
 ```
 
-- [ ] **startDate** & **endDate** these can be set. However if you do the it breaks the selection of other dates
+- [ ] **startDate** & **endDate**: these can be set. However if you do the it breaks the selection of other dates
 
 ```jsx
 startDate={moment().startOf('hour')}
 endDate={moment().startOf('hour').add(32, 'hour')}
 ```
 
-- [ ] **minYear** & **minYear** don't stop selection or display of any given year
+- [ ] **minYear** & **minYear**: don't stop selection or display of any given year
 
 ```jsx
 minYear={2018}
 maxYear={parseInt(moment().format('YYYY'),1)}
 ```
 
-- [ ] **ranges** has no effect; should build out a predefined dates selector and hide calendars unless `alwaysShowCalendars={true}`
+- [ ] **ranges**: has no effect; should build out a predefined dates selector and hide calendars unless `alwaysShowCalendars={true}`
 
 ```jsx
 ranges={{
@@ -46,19 +46,19 @@ ranges={{
 }}
 ```
 
-- [ ] no effect; should show calendars when ranges are provided 
+- [ ] **alwaysShowCalendars**: no effect; should show calendars when ranges are provided 
 
 ```jsx
 alwaysShowCalendars={false}
 ```
 
-- [ ] **maxSpan**.{**days**|**months**|**years**} has no effect; should preselect first_day + days range if second selection is outside of maxSpan.{days|months|years}
+- [ ] **maxSpan**.{**days**|**months**|**years**}: has no effect; should preselect first_day + days range if second selection is outside of maxSpan.{days|months|years}
 
 ```jsx
 maxSpan={{"days": 7}}
 ```
 
-- [ ] **locale** setting locale to any object value, with or without the below keys, will hide weekday names
+- [ ] **locale**: setting locale to any object value, with or without the below keys, will hide weekday names
 
 ```jsx
 locale={{
@@ -97,7 +97,7 @@ locale={{
 }}
 ```
 
-- [ ] **timePicker\*** has no effect, should produce time picker below calendars     
+- [ ] **timePicker\***: has no effect, should produce time picker below calendars     
 
 ```jsx
 timePicker={true|false}
@@ -105,20 +105,20 @@ timePickerSeconds={true|false}
 timePicker24Hour={true|false}
 ```
 
-- [ ]  **autoApply** has no effect     
+- [ ]  **autoApply**: has no effect     
 
 ```jsx
 autoApply={true}
 ```
 
-- [ ] **opens & drops** are not currently available as <LinkedCalendar> and <Calendar> don''t come attached to an input field
+- [ ] **opens & drops**: are not currently available as <LinkedCalendar> and <Calendar> don''t come attached to an input field
 
 ```jsx
 opens={"left"|"center"|"right"}
 drops={"up"|"down"}
 ```
 
-- [ ] **\*buttonClasses** have no effect; should add custom classes on "cancel" and "apply" buttons
+- [ ] **\*buttonClasses**: have no effect; should add custom classes on "cancel" and "apply" buttons
 
 ```jsx
 buttonClasses="common-picker-class"
